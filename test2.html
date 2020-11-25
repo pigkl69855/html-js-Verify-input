@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTDXHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK" />
+
+    <script type="text/javascript">
+        function clickEnter() {
+            alert('button enter is clicked!');
+        }
+        function _key() {
+            if (event.keyCode == 13)
+                clickEnter();
+        } 
+    </script>
+
+</head>
+
+<body onkeydown="_key()">
+    <input type="button" id="enter" value="enter" onclick="clickEnter()" />
+    <input type="button" value="123" onclick="alert('123');" />
+</body>
+
+</html>

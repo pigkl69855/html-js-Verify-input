@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+  <title>Random數字</title>
+</head>
+
+</html>
+
+<body onkeydown="_enterEvent()">
+
+  <script language="JavaScript">
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+    document.write("<tr><td><img src=\"picture/" + getRandomInt(9) + ".JPG\" ></img></td>");
+    document.write("<td><img src=\"picture/" + getRandomInt(9) + ".JPG\" ></img></td>");
+    document.write("<td><img src=\"picture/" + getRandomInt(9) + ".JPG\" ></img></td>");
+    document.write("<td><img src=\"picture/" + getRandomInt(9) + ".JPG\" ></img></td></tr>");
+
+    document.write("<br>");
+
+    document.write("<h1>圖片</h1>");
+
+    var array = new Array();
+    array[0] = getRandomInt(9);
+    array[1] = getRandomInt(9);
+    array[2] = getRandomInt(9);
+    array[3] = getRandomInt(9);
+
+    document.write("<tr>");
+    for (i = 0; i < 4; i++) {
+      document.write("<td><img src=\"picture/" + array[i] + ".JPG\" ></img></td>");
+    }
+    document.write("</tr>");
+    document.write("<h1>請輸入上圖的數字 <input type=\"number\" id=\"inputNumber\" name=\"inputNumber\"> <button id=\"enterButton\" onclick=\"myFunction()\" type=\"button\">確認</button> </h1>");
+    // <input type="text" id="fname" name="fname"><br>
+    // <button type="button">我是按鈕</button>
+
+    function myFunction() {
+      var inputNumber = document.getElementById("inputNumber").value;
+      if (String(inputNumber) == String(array[0]) + String(array[1]) + String(array[2]) + String(array[3])) {
+        document.write("<h1>yeah boy</h1>");
+        document.write("<h1>that right</h1>");
+        document.write("<h1>" + inputNumber + "</h1>");
+        document.write("<h1>" + String(array[0]) + String(array[1]) + String(array[2]) + String(array[3]) + "</h1>");
+        alert("yeah boy that right")   //只有確定
+        // confirm("yeah boy that right")//有 確定 與 取消 按鈕
+      } else {
+        document.write("<h1>go fuck yourself</h1>");
+        document.write("<h1>" + inputNumber + "</h1>");
+        document.write("<h1>" + String(array[0]) + String(array[1]) + String(array[2]) + String(array[3]) + "</h1>");
+        alert("驗證碼錯誤")
+      }
+    }
+
+
+    function _enterEvent() {
+      if (event.keyCode == 13)
+        myFunction();
+    }
+
+
+
+
+// console.log(getRandomInt(3));
+// expected output: 0, 1 or 2
+
+// console.log(getRandomInt(1));
+// expected output: 0
+
+// console.log(Math.random());
+// expected output: a number from 0 to <1
+  </script>
+
+
+
+
+  </html>

@@ -1,0 +1,35 @@
+
+
+<html>
+
+    <head>
+        <title>html javascript 九九乘法表</title>
+    </head>
+    
+    <body>
+    
+        <center>
+            <h2>
+                <font color="#FF0000">九九乘法表</font>
+            </h2>
+            <hr> <!-- 橫線 -->
+            <table style="border:8px #FFD382 groove;" cellpadding="10" border=''>
+                <script language="JavaScript">
+                    var i, j;
+                    document.write("<td colspan=\"9\"><center><b>九九乘法表</b></center></td>");
+                    for (i = 1; i <= 9; i++) {
+                        document.write("<tr>");
+                        j = 1;
+                        while (j <= 9) {
+                            document.write("<td>");
+                            document.write( j+ "*" + i + "=" + i * j);
+                            document.write("</td>");
+                            j++;
+                        }
+                    }
+                </script>
+            </table>
+        </center>
+    </body>
+    
+    </html>
